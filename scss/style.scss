@@ -1,0 +1,315 @@
+$maincolor: #5474fd;
+$accentcolor: #e10011;
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@import 'scss/bootstrap-grid.scss';
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'),
+    url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    background-image: url(../TravelAgency-assets/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 270px;
+    h4 {
+        font-size: 22px;
+        letter-spacing: .31em;
+        margin: 0;
+        font-weight: 300;
+    }
+    input {
+        width: 70%;
+        max-width: 500px;
+        height: 55px;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        margin-top: 50px;
+        margin-bottom: 120px;
+    }
+    button {
+        background-color: $maincolor;
+        height: 55px;
+        width: 140px;
+        color: white;
+        text-transform: uppercase;
+        border: solid white 2px;
+        margin: 0;
+        padding: 0;
+    }
+    &__scroll {
+        margin-bottom: 130px;
+        p {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    &__arrow {
+        width: 10px;
+        height: 10px;
+        border-bottom: solid white 3px;
+        border-right: solid white 3px;
+        margin: 0 auto;
+        transform: rotate(45deg);
+    }
+}
+
+.nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: $maincolor;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    &__links {
+        margin-right: 15%;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        padding: 0 10px;
+        font-family: 'aleo', sans-serif;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-left: 15%;
+}
+
+.whyus {
+    padding: 215px 0 130px;
+    background-image: url(../TravelAgency-assets/whyus-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__text {
+        margin: 0;
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        p {
+            font-weight: 300;
+            letter-spacing: .1em;
+            margin: 35px 0;
+            line-height: 26px;
+        }
+        button {
+            background-color: $maincolor;
+            padding: 0 20px;
+            height: 55px;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            margin: 0;
+        }
+    }
+    &__img {
+        margin-left: 5%;
+        display: inline-block;
+        width: 40%;
+        vertical-align: middle;
+        img {
+            width: 80%;
+            &:nth-child(2) {
+                margin-left: 15%;
+            }
+        }
+    }
+}
+
+.steps {
+    position: relative;
+    padding: 100px 0;
+    background-color: #333333;
+    text-align: center;
+    &__text {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 90px 0 80px;
+    }
+    .dotted {
+        position: absolute;
+    }
+    h3{
+    font-size: 36px;
+    font-family: 'aleo', sans-serif;
+}
+}
+
+.location1 {
+    background-image: url(../TravelAgency-assets/location1-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 225px 0 100px;
+    &__info {
+        width: 50%;
+        background-color: rgba(35, 35, 35, .8);
+        padding: 40px 25px 50px;
+        p {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.location2 {
+    background-image: url(../TravelAgency-assets/location2-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 225px 0 100px;
+    &__info {
+        margin-left: 50%;
+        width: 50%;
+        background-color: rgba(35, 35, 35, .8);
+        padding: 40px 25px 50px;
+        p {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.review {
+    background-image: url(../TravelAgency-assets/review-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0 195px;
+    text-align: center;
+    &__content{
+        display: flex;
+    }
+    &__info{
+        background-color: #333333;
+        text-align: left;
+        flex-grow: 3;
+        padding:40px 55px ;
+        max-height: 285px;
+        overflow: hidden;
+    }
+    &__img{
+        img{
+        flex-grow: 1;
+        flex-shrink: 2;  
+        }
+        
+    }
+    span{
+        font-size: 48px;
+        color: #5474fd;
+        font-family: 'aleo';
+    }
+}
+
+.footer{
+    background-color: #232323;
+    text-align: center;
+    padding: 120px 0 50px;
+    h3{
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+}
+
+.socialmedia{
+    &__icon{
+        padding: 30px 10px 0;
+    }
+}
+
+button {
+    background-color: $maincolor;
+    padding: 0 60px;
+    height: 55px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin: 0;
+    max-width: 220px;
+    font-family: 'aleo', sans-serif;
+    &:hover{
+        border: solid white 3px;
+    }
+}
+
+h2 {
+    margin: 35px 0;
+    font-size: 36px;
+    font-family: 'aleo', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .1em;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+}
+
+p {
+    font-weight: 300;
+    line-height: 26px;
+}
+
+h6{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
